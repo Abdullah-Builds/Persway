@@ -1,0 +1,19 @@
+{
+  "name": "persway",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "workspaces": [
+    "frontend",
+    "backend"
+  ],
+  "scripts": {
+    "dev": "concurrently \"npm run start --workspace backend\" \"npm run dev --workspace frontend\"",
+     "build": "npm run build --workspace frontend",
+     "start": "npm run start --workspace backend"
+  },
+  "devDependencies": {
+    "@types/node": "^24.3.0",
+    "concurrently": "^9.2.0"
+  }
+}
